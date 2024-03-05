@@ -1,9 +1,9 @@
-package web2.repository;
+package web.repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
-import web2.model.User;
+import web.model.User;
 
 import java.util.List;
 
@@ -15,8 +15,7 @@ public class UserRepositoryImp implements UserRepository {
     @Override
     @SuppressWarnings("unchecked")
     public List<User> getAllUsers() {
-        List<User> list = entityManager.createQuery("SELECT u FROM User u").getResultList();
-        return list;
+        return (List<User>) entityManager.createQuery("SELECT u FROM User u").getResultList();
     }
 
 

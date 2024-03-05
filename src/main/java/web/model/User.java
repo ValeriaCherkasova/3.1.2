@@ -1,22 +1,22 @@
-package web2.model;
+package web.model;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.GenerationType;
 
 import java.util.Objects;
+
 @Entity
-@AllArgsConstructor
-@Data
 @Table(name = "users")
 public class User {
-    private @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
 
     @Column(name = "name")
-   // @Size(min = 2, max = 30, message = "Name should be between 2 to 30")
     private String firstName;
 
     @Column(name = "last_name")

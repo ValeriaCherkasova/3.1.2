@@ -1,7 +1,6 @@
-package web2.repository;
+package web.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import web2.model.User;
+import web.model.User;
 
 import java.util.List;
 
